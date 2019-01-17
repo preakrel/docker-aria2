@@ -16,7 +16,7 @@ RUN chown aria2 /home/aria2 -R
 
 COPY aria2.conf  /home/aria2/config/
 
-ENTRYPOINT ["/usr/local/bin/aria2c","--conf-path=/home/aria2/config/aria2.conf"]
+CMD ["/usr/local/bin/aria2c","--conf-path=/home/aria2/config/aria2.conf"]
 
 EXPOSE 6800
 
