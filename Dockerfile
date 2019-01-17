@@ -2,7 +2,7 @@
 # 基础镜像
 FROM ubuntu:16.04
 # 维护者信息
-MAINTAINER abulo.hoo@gmail.com
+MAINTAINER 1396981439@qq.com
 # 设置源
 RUN  sed -i 's/archive.ubuntu.com/mirrors.aliyun.com/' /etc/apt/sources.list && \
 	groupadd -r aria2 && \
