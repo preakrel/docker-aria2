@@ -2,7 +2,7 @@
 # 基础镜像
 FROM ubuntu:16.04
 # 维护者信息
-MAINTAINER abulo.hoo@gmail.com
+MAINTAINER 1396981439@qq.com
 # 设置源
 RUN  sed -i 's/archive.ubuntu.com/mirrors.aliyun.com/' /etc/apt/sources.list && \
 	groupadd -r aria2 && \
@@ -15,6 +15,8 @@ RUN mkdir -pv /home/aria2/config && mkdir -pv /home/aria2/session && mkdir -pv /
 RUN chown aria2 /home/aria2 -R
 
 COPY aria2.conf  /home/aria2/config/
+
+ENTRYPOINT ["/usr/local/bin/aria2c","--conf-path=/home/aria2/config/aria2.conf"]
 
 EXPOSE 6800
 
